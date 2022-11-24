@@ -17,7 +17,7 @@ public class SQRServiceTest {
     public void shouldCalcInExact() {
         SQRService service = new SQRService();
         int expected = 1;
-        int actual = service.calcSQR(100, 100);
+        int actual = service.calcSQR(99, 100);
 
         Assertions.assertEquals(expected, actual);
     }
@@ -25,7 +25,7 @@ public class SQRServiceTest {
     @Test
     public void shouldCalcOutExact() {
         SQRService service = new SQRService();
-        int expected = 100;
+        int expected = 0;
         int actual = service.calcSQR(0, 0);
 
         Assertions.assertEquals(expected, actual);
